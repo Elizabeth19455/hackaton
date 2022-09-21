@@ -62,11 +62,37 @@
 
 <!-- Sidebar -->
 <div class="w-full h-full ">
-    <div class="w-72 h-full overflow-scroll overflow-x-hidden aside fixed pt-32">
-      <br> <h1 class=" text-center mr-2 text-red-500 text-3xl font-bold ">Información</h1> <br>
-        <p class=" text-center text-xl mr-2 text-black"> 
-          <a href="{{url_for('info')}}">¿Que es la artesania?</a>
+  <!-- Sidebar -->
+    <div class="w-80 h-full overflow-scroll overflow-x-hidden aside fixed pt-28">
+      
+      <!-- Logo y inicio de informacion -->
+      <img src="/static/gobierno_logo.png">
+      <h1 class=" text-center mr-2 text-red-500 text-3xl font-bold ">Información</h1> <br>
+        <p class=" text-center text-lg mr-2 text-black"> 
+          <a href="{{url_for('info')}}">¿Que es la artesania?</a> 
+        </p>
+        <p class=" text-lg ml-1 text-black text-center"> ¿Como promovemos la artesania?</p> 
+        <p class=" text-center text-lg ml-1 text-black"> ¿Cuantos tipos de artesanias existen?</p> <br>
+        <!-- Inicio de artesanos -->
+        <a href="{{url_for('tarjeta')}}" class=" text-right ml-20 text-red-500 text-3xl font-bold ">Artesanos </a>
+        <p class=" text-center text-lg mr-2 text-black"> 
+          <br><p class=" text-center text-lg ml-1 text-black">Eustaquia de Garay</p> 
+          <p class=" text-center text-lg ml-1 text-black">Felicita de Rolon</p> 
+          <p class=" text-center text-lg ml-1 text-black">Nidia Gimenez</p> <br>
+          <!-- Inicio de categorias -->
+          <a href="{{url_for('tarjeta')}}" class=" text-right ml-20 text-red-500 text-3xl font-bold ">Categorias </a>
+        <p class=" text-center text-lg mr-2 text-black"> 
+          <br> <p class=" text-center text-lg ml-1 text-black">Tallado en madera</p> 
+          <p class=" text-center text-lg ml-1 text-black">Arte en barro y arcilla</p> 
+          <p class=" text-center text-lg ml-1 text-black">El arte de las telas</p> 
+          <!-- Inicio de info para ser maestro -->
+          <br><a href="{{url_for('tarjeta')}}" class=" text-center ml-10 text-red-500 text-2xl font-bold ">¿Queres ser maestro? </a>
+        <p class=" text-center text-lg mr-2 text-black"> 
+          <br><p class=" text-center text-lg ml-1 text-black">Información</p> 
+          <p class=" text-center text-lg ml-1 text-black">Registrarse</p>  
+        </p>    
     </div>
+
             
                 
 </div>
@@ -78,7 +104,7 @@
                         <!-- tarjeta -->
                       {% for tarjeta in clases%}
                         <div class="m-5 max-w-xs rounded overflow-hidden shadow-lg shrink-0 bg-gray-50 ">
-                            <img class="w-full h-[215px]" src="/static/{{tarjeta.img}}" alt="Sunset in the mountains">
+                            <img class="w-full h-[215px] object-cover" src="/static/{{tarjeta.img}}" alt="Sunset in the mountains">
                             <div class="px-6 py-4">
                               <div class="font-bold text-xl mb-2">{{tarjeta.titulo}}</div>
                               <p class="text-gray-700 text-base">

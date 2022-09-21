@@ -93,38 +93,35 @@
       <div
         class="w-72 h-full overflow-scroll overflow-x-hidden aside fixed pt-32"
       >
-        <div class="pl-8 pr-2 pt-6">
-          <h2 class="underline">Informacion</h2>
-          <ul>
-            <li><a href="#">Que es la artesania</a></li>
-            <li><a href="#">Como podemos promover la artesania</a></li>
-            <li><a href="#">Cuantos tipos de artesanias existen</a></li>
-          </ul>
-          <br />
-
-          <h2 class="underline">Artesanos</h2>
-          <ul>
-            <li><a href="#">Eustaquia de Garay</a></li>
-            <li><a href="#">Felicita de Rolon</a></li>
-            <li><a href="#">Nidia Gimenez</a></li>
-          </ul>
-          <br /><br />
-
-          <h2 class="underline">Categorias</h2>
-          <ul>
-            <li><a href="#">Tallado en madera</a></li>
-            <li><a href="#">Arte en barro y arcilla</a></li>
-            <li><a href="#">El arte de las telas</a></li>
-          </ul>
-          <br /><br />
-
-          <h2 class="underline">Queres ser maestro?</h2>
-          <ul>
-            <li><a href="#">Informacion</a></li>
-            <li><a href="#">Registrese</a></li>
-          </ul>
-        </div>
-      </div>
+        <div>
+          <div class="w-80 h-full overflow-scroll overflow-x-hidden aside fixed pt-28 mr-5"></div>
+          <!-- Logo y inicio de informacion -->
+      <img src="/static/gobierno_logo.png">
+      <h1 class=" text-center mr-2 text-red-500 text-3xl font-bold ">Información</h1> <br>
+        <p class=" text-center text-lg mr-2 text-black"> 
+          <a href="{{url_for('info')}}">¿Que es la artesania?</a> 
+        </p>
+        <p class=" text-lg ml-1 text-black text-center"> ¿Como promovemos la artesania?</p> 
+        <p class=" text-center text-lg ml-1 text-black"> ¿Cuantos tipos de artesanias existen?</p> <br>
+        <!-- Inicio de artesanos -->
+        <a href="{{url_for('tarjeta')}}" class=" text-right ml-20 text-red-500 text-3xl font-bold ">Artesanos </a>
+        <p class=" text-center text-lg mr-2 text-black"> 
+          <br><p class=" text-center text-lg ml-1 text-black">Eustaquia de Garay</p> 
+          <p class=" text-center text-lg ml-1 text-black">Felicita de Rolon</p> 
+          <p class=" text-center text-lg ml-1 text-black">Nidia Gimenez</p> <br>
+          <!-- Inicio de categorias -->
+          <a href="{{url_for('tarjeta')}}" class=" text-right ml-20 text-red-500 text-3xl font-bold ">Categorias </a>
+        <p class=" text-center text-lg mr-2 text-black"> 
+          <br> <p class=" text-center text-lg ml-1 text-black">Tallado en madera</p> 
+          <p class=" text-center text-lg ml-1 text-black">Arte en barro y arcilla</p> 
+          <p class=" text-center text-lg ml-1 text-black">El arte de las telas</p> 
+          <!-- Inicio de info para ser maestro -->
+          <br><a href="{{url_for('tarjeta')}}" class=" text-center ml-5 text-red-500 text-2xl font-bold ">¿Queres ser maestro? </a>
+        <p class=" text-center text-lg mr-2 text-black"> 
+          <br><p class=" text-center text-lg ml-1 text-black">Información</p> 
+          <p class=" text-center text-lg ml-1 text-black">Registrarse</p>  
+        </p>    
+    </div>
     </div>
     <!-- Sidebar ends -->
     <!-- tarjeta -->
@@ -134,97 +131,90 @@
       <div class="shrink-0 max-w-[1200px]">
         <!-- tarjeta 1 -->
 
-        <div class="rounded overflow-hidden shadow-lg m-3 w-9/12">
+         <div class="rounded overflow-hidden shadow-lg m-3 w-9/12">
           <div class="h-[400px] w-full overflow-hidden">
-            <img
-              class="w-full"
-              src="{{ url_for('static', filename='nhanduti.jpg') }}"
-              alt="Sunset in the mountains"
-            />
+            <img src="/static/nanduti.jpg">
+            
           </div>
 
-          <div class="px-12 py-8 bg-white">
-            <div class="font-bold font-sans text-xl mb-2 text-[36px] mb-5">
-              La tela
+          <div class="px-12 py-8 bg-yellow-50">
+            <div class=" text-red-500 font-bold font-sans text-xl mb-2 text-[36px]">
+              Elaboracion de Nhanduti de Manera Creativa
             </div>
-            <p class="text-gray-700 font-sans leading-relaxed text-lg">
-              Uno de los elementos base del bordado en Ao Po’i es la tela,
-              encontramos en venta nuestro tradicional Ao Po’i en centros
-              comercialesde todo el país, el cual viene en una variedad de
-              colores, lo que nospermite realizar prendas modernas y bien
-              coloridas, a gusto o necesidad de cada uno. Este género está
-              hilado con puro algodón y, al tenertrama algo abierta, es ideal
-              para el caluroso clima de nuestro país yotros países.Otra opción
-              en telas es el uso del lienzo, que puede ser el lienzorustico o
-              lienzo de fabrica.Lienzo rústico: Está hecho en telar manual.
-              Lienzo de fábrica: Realizado en fabrica textil. Estos se pueden
-              adquirir en color crudo o en una gran gama decolores. Sabias que
-              Al ser de algodón, estatela se encoje un poco allavarla, cosa que
-              hayque calcular paraadquirir el género
+            <p class="text-black font-sans leading-relaxed text-lg">
+              Se corta la tela de lienzo 3cm menos que el tamanho del bastidor, 
+              se hace una bastilla en los bordes, luego de realizar estos pasos fijar 
+              la tela por el bastidor. Para fijar la tela al bastidor, se centra el mismo 
+              atando con el hilo o linha en las 4 esquinas. Despues fijar los laterales dando 
+              punteadas alrededor cada 2 a 3 cm, de modo que quede bien tensada. El hilo que se
+               usa para tensar debe atarse al bastidor al principio y al final del tensado, a continuación 
+               calcar el disenho sobre tela. Seguidamente se carga el hilo para el diseño, para elo se realiza 
+               lo siguiente: Se traza en la tela el diseño (circulo). Se marca el centro y con la aguja enhebrada 
+               se procede al cargado. Haciendo un nudo usando de referencia al sentido del hilo. Luego se procede 
+               a relenar el diseño con el hilo dando puntadas arriba y abajo, dejando un pequeño espacio de 2 a 
+               3 cm entre hilo e hilo, llenar la parte de arriba en sentido de la aguja del reloj y la parte de 
+               abajo al reves del diseño. Una vez rellenado el disenho hacer un nudo en el centro del circulo 
+               pasado la aguja con el hilo por debajo de los hilos cargando de 2 a 3 vueltas mas o menos (esto para 
+               tensar los hilos y que no se muevan) logrando el centro y apyte.
             </p>
           </div>
         </div>
 
-        <div class="rounded overflow-hidden shadow-lg m-3 w-9/12">
+        <br> <div class="rounded overflow-hidden shadow-lg m-3 w-9/12">
           <div class="h-[400px] w-full overflow-hidden">
             <img
               class="w-full"
-              src="/static/nhanduti.jpg"
-              alt="Sunset in the mountains"
+              src="/static/nanduti2.jpg"
             />
           </div>
 
-          <div class="px-12 py-8 bg-white">
-            <div class="font-bold font-sans text-xl mb-2 text-[36px] mb-5">
-              La tela
+          <div class="px-12 py-8 bg-yellow-50">
+            <div class=" text-red-500 font-bold font-sans text-xl mb-2 text-[36px] mb-5">
+              Dechado a puntos o Tejidos Armaje cargado circular
             </div>
-            <p class="text-gray-700 font-sans leading-relaxed text-lg">
-              Uno de los elementos base del bordado en Ao Po’i es la tela,
-              encontramos en venta nuestro tradicional Ao Po’i en centros
-              comercialesde todo el país, el cual viene en una variedad de
-              colores, lo que nospermite realizar prendas modernas y bien
-              coloridas, a gusto o necesidad de cada uno. Este género está
-              hilado con puro algodón y, al tenertrama algo abierta, es ideal
-              para el caluroso clima de nuestro país yotros países.Otra opción
-              en telas es el uso del lienzo, que puede ser el lienzorustico o
-              lienzo de fabrica.Lienzo rústico: Está hecho en telar manual.
-              Lienzo de fábrica: Realizado en fabrica textil. Estos se pueden
-              adquirir en color crudo o en una gran gama decolores. Sabias que
-              Al ser de algodón, estatela se encoje un poco allavarla, cosa que
-              hayque calcular paraadquirir el género
+            <p class="text-black font-sans leading-relaxed text-lg">
+              Con la aguja enhebrada, atravesamos la tela dando puntadas 
+              en el borde superior de esta marca del circulo y atmos los extremos 
+              del hilo en el centro del mismo como se ilustra en la figura 6, esto 
+              para que quede parejo el cargado. Si se prefiere, se puede marcar el 
+              centro para tener una guia. De ahora en mas semantiene este sentido en 
+              el cargado, en una mitad cargamos con sentido hacia la derecha, e la otra 
+              hacia la izquierda, hasta completar todo el circulo. Al hacerlo, los hilos 
+              e el centro van quedando superpuestos, al realizar la ultima lazada se pasa 
+              la aguja por debajo de todos los hilosde la trama, pero sin atravesar la tela 
+              y se lasa el hilo de la aguja formando un nudo, se repite este proceso dos veces 
+              mas para trabar para bien el centro, luego se puede empezar el bordado. Para las formas 
+              cuadradas o rectangulares se trazara en tela un cuadrado con las medidas deseadas(lo mismo 
+              se aplica a medidas triangulares). Se seguiran los mismos pasos pasos de inicio del motivo 
+              circular pero debemos prestar atencion a los vertices para que el trabajo quede prolijo, 
+              en el nudo central, tambien se aplica lo detallado en el cargado circular.
             </p>
           </div>
         </div>
 
         <!-- tarjeta -->
 
-        <div class="rounded overflow-hidden shadow-lg m-3 w-9/12">
+        <br> <div class="rounded overflow-hidden shadow-lg m-3 w-9/12">
           <div class="h-[400px] w-full overflow-hidden">
             <img
               class="w-full"
-              src="/static/nhanduti.jpg"
+              src="/static/nanduti3.jpg"
               alt="Sunset in the mountains"
             />
           </div>
 
-          <div class="px-12 py-8 bg-white">
-            <div class="font-bold font-sans text-xl mb-2 text-[36px] mb-5">
-              La tela
+          <div class="px-12 py-8 bg-yellow-50">
+            <div class="text-red-500 font-bold font-sans text-xl mb-2 text-[36px] mb-5">
+              El Semicirculo
             </div>
-            <p class="text-gray-700 font-sans leading-relaxed text-lg">
-              Uno de los elementos base del bordado en Ao Po’i es la tela,
-              encontramos en venta nuestro tradicional Ao Po’i en centros
-              comercialesde todo el país, el cual viene en una variedad de
-              colores, lo que nospermite realizar prendas modernas y bien
-              coloridas, a gusto o necesidad de cada uno. Este género está
-              hilado con puro algodón y, al tenertrama algo abierta, es ideal
-              para el caluroso clima de nuestro país yotros países.Otra opción
-              en telas es el uso del lienzo, que puede ser el lienzorustico o
-              lienzo de fabrica.Lienzo rústico: Está hecho en telar manual.
-              Lienzo de fábrica: Realizado en fabrica textil. Estos se pueden
-              adquirir en color crudo o en una gran gama decolores. Sabias que
-              Al ser de algodón, estatela se encoje un poco allavarla, cosa que
-              hayque calcular paraadquirir el género
+            <p class="text-black font-sans leading-relaxed text-lg">
+              Este tipo de cargado se utiliza mucho en bordes de manteles o 
+              carpetas, y en prendas como el typo'i, su tamanho puede variar 
+              de acuerdo a la necesidad. Una vez trazado el disenho deseado en
+               el bastidor con la tela tensada, se marca el centro (x). Nuestra aguja 
+               debe siempre salir de X y va hacia la izquierda, donde se da la primera 
+               puntada, luego se ira cargando hasta tener totalizada todo el motivo, depsuesde 
+               cargar se procedera al bordado.
             </p>
           </div>
         </div>
