@@ -56,7 +56,8 @@ def tarjeta():
 # pagina de formulario ar98
 @app.route("/formulario")
 def admin():
-    return render_template("formulario.html")
+    # return render_template("formulario.html")
+    return render_template("registro.html")
 
 
 # esta es la funcion que trae los datos ingresados en el formulario y lo guarda en la base de datoss
@@ -75,7 +76,8 @@ def carga():
         )
         db.session.add(tarea)
         db.session.commit()
-        return redirect(url_for('admin'))
+        return redirect(url_for('home'))
+        # return redirect(url_for('admin'))
     elif intento_de_leer=="1":
         tarea = Maestro(
         nombre=request.form['nombre'],
@@ -88,12 +90,16 @@ def carga():
         )
         db.session.add(tarea)
         db.session.commit()
-        return redirect(url_for('admin'))
+        return redirect(url_for('home'))
+        # return redirect(url_for('admin'))
 
 
 @app.route("/home",methods=['GET'])
 def home():
     lista_clases = []
+    lista_clases.append(clase('clase5.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
+    con todo lo que necesitas saber para integrarte en 
+    el hermoso mundo del tallado......'''))
     lista_clases.append(clase('clase1.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
 con todo lo que necesitas saber para integrarte en 
 el hermoso mundo del tallado......'''))
@@ -106,9 +112,7 @@ el hermoso mundo del tallado......'''))
     lista_clases.append(clase('clase4.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
     con todo lo que necesitas saber para integrarte en 
     el hermoso mundo del tallado......'''))
-    lista_clases.append(clase('clase5.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
-    con todo lo que necesitas saber para integrarte en 
-    el hermoso mundo del tallado......'''))
+    
     #cargar mas de la foto de ellos y agregar el texto de figma
     return render_template('index.html',clases=lista_clases)
 

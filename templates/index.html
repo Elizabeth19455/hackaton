@@ -80,16 +80,18 @@
           <p class=" text-center text-lg ml-1 text-black">Felicita de Rolon</p> 
           <p class=" text-center text-lg ml-1 text-black">Nidia Gimenez</p> <br>
           <!-- Inicio de categorias -->
-          <a href="{{url_for('tarjeta')}}" class=" text-right ml-20 text-red-500 text-3xl font-bold ">Categorias </a>
+          <a  class=" text-right ml-20 text-red-500 text-3xl font-bold ">Categorias </a>
         <p class=" text-center text-lg mr-2 text-black"> 
           <br> <p class=" text-center text-lg ml-1 text-black">Tallado en madera</p> 
           <p class=" text-center text-lg ml-1 text-black">Arte en barro y arcilla</p> 
           <p class=" text-center text-lg ml-1 text-black">El arte de las telas</p> 
           <!-- Inicio de info para ser maestro -->
-          <br><a href="{{url_for('tarjeta')}}" class=" text-center ml-10 text-red-500 text-2xl font-bold ">¿Queres ser maestro? </a>
+          <br><a class=" text-center ml-10 text-red-500 text-2xl font-bold ">¿Queres ser maestro? </a>
         <p class=" text-center text-lg mr-2 text-black"> 
           <br><p class=" text-center text-lg ml-1 text-black">Información</p> 
-          <p class=" text-center text-lg ml-1 text-black">Registrarse</p>  
+          <p class=" text-center text-lg mr-2 text-black"> 
+            <a href="{{url_for('admin')}}">Registrarse</a> 
+          </p>
         </p>    
     </div>
 
@@ -112,7 +114,7 @@
                               </p>
                             </div>
                             <div class="px-6 pt-4 pb-2">
-                                <button class="bg-red-500 py-1 px-3 text-white rounded-full float-right mb-3 -translate-y-4 hover:bg-red-600">Entrar</button>
+                                <a href="{{url_for('guia_principal')}}" class="bg-red-500 py-1 px-3 text-white rounded-full float-right mb-3 -translate-y-4 hover:bg-red-600">Entrar</a>
                             </div>
                           </div>
                       {% endfor %}
