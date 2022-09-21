@@ -97,21 +97,24 @@ def carga():
 @app.route("/home",methods=['GET'])
 def home():
     lista_clases = []
-    lista_clases.append(clase('clase5.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
-    con todo lo que necesitas saber para integrarte en 
-    el hermoso mundo del tallado......'''))
+    lista_clases.append(clase('clase5.png','Arte en Tela','''Todo lo que ves lo puedes alcanzar, recuerda que 
+el arte sobre tela es complicado, pero no imposible
+con los tips que te brindamos podras............'''))
     lista_clases.append(clase('clase1.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
 con todo lo que necesitas saber para integrarte en 
 el hermoso mundo del tallado......'''))
-    lista_clases.append(clase('clase2.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
-    con todo lo que necesitas saber para integrarte en 
-    el hermoso mundo del tallado......'''))
-    lista_clases.append(clase('clase3.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
-    con todo lo que necesitas saber para integrarte en 
-    el hermoso mundo del tallado......'''))
-    lista_clases.append(clase('clase4.png','Introducción a tallado en madera','''De la mano de nuestro gran artista, llega este curso
-    con todo lo que necesitas saber para integrarte en 
-    el hermoso mundo del tallado......'''))
+    lista_clases.append(clase('clase2.png','El arte del Filigrama','''Filigrana una técnica milenaria que consiste 
+en unir hilos finos que conforman elaboradas
+piezas de joyería y orfebrería formando singulares
+dibujos y diseños. Toda la información que 
+necesitas esta aqui......'''))
+    lista_clases.append(clase('clase3.png','El karanday nos llama','''El karanday es uno de los objetos más 
+representativos del trabajo manual de nuestros 
+compatriotas, aqui puedes encontrar toda la
+informacion paso a paso. ....'''))
+    lista_clases.append(clase('clase4.png','Introducción al moldeado en barro','''Los cántaros, que se fabrican con metal o con 
+barro, suelen tener asas o manijas. En esta ocasión
+aprenderas el arte del barro y podras.........'''))
     
     #cargar mas de la foto de ellos y agregar el texto de figma
     return render_template('index.html',clases=lista_clases)
